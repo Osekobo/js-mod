@@ -14,31 +14,25 @@
   </head>
   <body>
     <div class="container">
-      
-        <form id="my_form">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" id="basic"
-              >Basic_salary</label
-            >
-            <input
-              type="number"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label" id="benefits"
-              >Benefits</label
-            >
-            <input
-              type="number"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">Calculate</button>
-        </form>
+      <form id="form">
+        <div class="mb-3">
+          <div>Enter your basic salary and benefits</div>
+          <label for="exampleInputEmail1" class="form-label"
+            >Basic salary</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="basic"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Benefits</label>
+          <input type="number" class="form-control" id="benefits" />
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+      </form>
       <h4 id="gross"></h4>
     </div>
     <script
