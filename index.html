@@ -10,13 +10,16 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-    <h1>js</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
-    <div class="container">
+  <body class="bg-dark text-white">
+    <div class="container mt-5">
+      <h1><span class="text-warning">Tax </span> Calculator <i class="fa-solid fa-calculator bg-dark"></i></h1>
+    </div>
+    <div class="container mb-5">
       <form id="form">
         <div class="mb-3">
-          <div>Enter your basic salary and benefits</div>
+          <div class="py-4">Enter your basic salary and benefits</div>
           <label for="exampleInputEmail1" class="form-label"
             >Basic salary</label
           >
@@ -31,9 +34,45 @@
           <label for="exampleInputPassword1" class="form-label">Benefits</label>
           <input type="number" class="form-control" id="benefits" />
         </div>
-        <button type="submit" class="btn btn-primary">Calculate</button>
+        <button type="submit" class="btn btn-warning">Calculate</button>
       </form>
-      <h4 id="gross"></h4>
+    </div>
+
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Value(Ksh.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NHIF</td>
+            <td id="gross"></td>
+          </tr>
+          <tr>
+            <td>NSSF</td>
+            <td id="x"></td>
+          </tr>
+          <tr>
+            <td>NHDF</td>
+            <td id="nhdf"></td>
+          </tr>
+          <tr>
+            <td>taxable_income</td>
+            <td id="taxable_income"></td>
+          </tr>
+          <tr>
+            <td>PAYEE</td>
+            <td id="payee"></td>
+          </tr>
+          <tr>
+            <td>net_salary</td>
+            <td id="Net"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
