@@ -10,29 +10,38 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body class="bg-dark text-white">
     <div class="container mt-5">
-      <h1><span class="text-warning">Tax </span> Calculator <i class="fa-solid fa-calculator bg-dark"></i></h1>
+      <h1>
+        <i class="fa-solid fa-calculator bg-dark"></i
+        ><span class="text-warning"> Tax </span> Calculator
+      </h1>
     </div>
     <div class="container mb-5">
       <form id="form">
         <div class="mb-3">
-          <div class="py-4">Enter your basic salary and benefits</div>
-          <label for="exampleInputEmail1" class="form-label"
+          <div class="py-4 fs-1">Enter your basic salary and benefits</div>
+          <label for="exampleInputEmail1" class="form-label fs-1"
             >Basic salary</label
           >
           <input
             type="number"
-            class="form-control"
+            class="form-control fs-5 fw-semibold"
             id="basic"
             aria-describedby="emailHelp"
           />
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Benefits</label>
-          <input type="number" class="form-control" id="benefits" />
+          <label for="exampleInputPassword1" class="form-label fs-1">Benefits</label>
+          <input type="number" class="form-control fs-5 fw-semibold" id="benefits" />
         </div>
         <button type="submit" class="btn btn-warning">Calculate</button>
       </form>
@@ -42,34 +51,38 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Category</th>
-            <th scope="col">Value(Ksh.)</th>
+            <th scope="col" class="fs-2">Category</th>
+            <th scope="col" class="fs-2">Value(Ksh.)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>NHIF</td>
-            <td id="gross"></td>
+            <td class="fs-5 fw-semibold">Gross Salary</td>
+            <td id="123" class="fs-5 fw-semibold"></td>
           </tr>
           <tr>
-            <td>NSSF</td>
-            <td id="x"></td>
+            <td class="fs-5 fw-semibold">NHIF</td>
+            <td id="gross" class="fs-5 fw-semibold"></td>
           </tr>
           <tr>
-            <td>NHDF</td>
-            <td id="nhdf"></td>
+            <td class="fs-5 fw-semibold">NSSF</td>
+            <td id="x" class="fs-5 fw-semibold"></td>
           </tr>
           <tr>
-            <td>taxable_income</td>
-            <td id="taxable_income"></td>
+            <td class="fs-5 fw-semibold">NHDF</td>
+            <td id="nhdf" class="fs-5 fw-semibold"></td>
           </tr>
           <tr>
-            <td>PAYEE</td>
-            <td id="payee"></td>
+            <td class="fs-5 fw-semibold">taxable_income</td>
+            <td id="taxable_income" class="fs-5 fw-semibold"></td>
           </tr>
           <tr>
-            <td>net_salary</td>
-            <td id="Net"></td>
+            <td class="fs-5 fw-semibold">PAYEE</td>
+            <td id="payee" class="fs-5 fw-semibold"></td>
+          </tr>
+          <tr>
+            <td class="fs-5 fw-semibold">net_salary</td>
+            <td id="Net" class="fs-5 fw-semibold"></td>
           </tr>
         </tbody>
       </table>

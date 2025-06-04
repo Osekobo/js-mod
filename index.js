@@ -5,6 +5,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   let basic_salary = Number(document.getElementById("basic").value);
   let benefits = Number(document.getElementById("benefits").value);
   let grossSalary = basic_salary + benefits;
+  document.getElementById("123").innerHTML = grossSalary;
 
   function calculate_gross(grossSalary) {
     if (grossSalary <= 5999) return 150;
@@ -41,7 +42,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   let NHDF = grossSalary * 0.015;
   document.getElementById("nhdf").innerHTML = NHDF;
   // 18 Calculate the taxable income. i.e taxable_income = gross salary - (NSSF + NHDF + NHIF)
-  let tax = grossSalary - (NHDF + NHDF); // NO NHIF YET
+  let tax = grossSalary - (NHDF + NHDF + gross); 
   document.getElementById("taxable_income").innerHTML = tax;
 
   // 19 Continue with the same program and find the person's PAYEE using the taxable income above. Find the Kenya PAYEE Tax Rate using THIS LINK
@@ -56,6 +57,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   document.getElementById("payee").innerHTML = r;
 
   // 20 Continue with the same program and calculate an individual’s Net Salary using: net_salary = gross_salary - (nhif + nhdf +  nssf + payee)
-  let net = grossSalary - (NHDF); // payee and nhif
+  let p = grossSalary - tax
+  let net = grossSalary - (NHDF + gross + p); // payee
   document.getElementById("Net").innerHTML = net;
 });
